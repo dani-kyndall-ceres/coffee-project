@@ -1,9 +1,98 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+
+#coffees {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: #647FAE;
+    font-family: 'Indie Flower', cursive;
+
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+
+
+.h1Coffee {
+    font-size: 70px;
+
 }
+
+.jumbotron {
+    background-image: url("img/coffee.jpg");
+    background-position: center center;
+    background-size: 100% 200%;
+
+}
+
+
+h1{
+    font-family: 'Indie Flower', cursive;
+    color: #4F535F;
+    position: relative;
+    top: 80px;
+    right: 180px;
+}
+
+
+h3 {
+    font-family: 'Indie Flower', cursive;
+    color: #4F535F;
+}
+
+.container{
+    max-height: 600px;
+    position: relative;
+
+
+}
+
+.coffeeName {
+    font-size: 38px;
+}
+
+.coffeeRoast {
+    font-size: 16px;
+    padding: 5px;
+}
+
+#h1Coffee{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.roast1{
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5em;
+}
+
+#submit1{
+
+    margin-top: 1em;
+}
+
+#submit2{
+
+    margin-top: 1em;
+}
+
+
+
+.text-area {
+    width: 350px;
+
+}
+
+#addcoffee {
+    display: flex;
+    justify-content: center;
+}
+
+#forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
