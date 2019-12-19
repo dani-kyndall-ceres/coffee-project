@@ -27,6 +27,7 @@ function updateCoffees(e) {
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     let searchCoffee = document.getElementById('search-coffee').value;
+    JSON.parse(window.localStorage.getItem('customCoffees'));
     console.log(selectedRoast);
     if (selectedRoast === "all") {
         coffees.forEach(function (coffee) {
@@ -60,12 +61,14 @@ function addCoffee (e) {
     coffees.forEach(function(coffee) {
         filteredCoffees.push(coffee)
     });
+    localStorage.setItem("customCoffees", JSON.stringify(coffees));
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-let coffees = [
+if(localStorage.getItem('customCoffees')=== null){
+var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -81,7 +84,13 @@ let coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-coffees.reverse();
+    coffees.reverse();
+
+}else{
+    var coffees = JSON.parse(window.localStorage.getItem('customCoffees'));
+    coffees.reverse();
+}
+
 
 let addedName = document.getElementById('input-name');
 let tbody = document.querySelector('#coffees');
